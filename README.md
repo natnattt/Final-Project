@@ -100,7 +100,7 @@ This is were you put your `dag` files. This folder is already mounted on the con
 
 **data**
 
-This flder contains the data needed for your project. If you want to generate or add additional data, you can place them here.
+This folder contains the data needed for your project. If you want to generate or add additional data, you can place them here.
 
 **docker**
 
