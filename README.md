@@ -17,7 +17,8 @@ _Note: All data used is synthetic, reflecting real-world data from an online ret
 
 ## Overview
 ### Full Pipeline
-[![data-diagram.jpg](https://i.postimg.cc/HL2Y0VGT/data-diagram.jpg)](https://postimg.cc/zLyY8DXQ)
+![Uploading Data Pipeline.drawio.png…]()
+
 
 ## Setup
 - Since our goal is to minimize our resource usage, we will use free cloud databases on [Neon](https://neon.tech/). Once we create a database in it, get the connection string and put it in variable `DW_POSTGRES_URI` at `.env`
