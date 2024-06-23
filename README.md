@@ -120,7 +120,7 @@ This folder contains script needed in order to automate an initializations proce
 ## Data Transformation Project
 A detailed description of the data transformation steps performed on various datasets. The transformations include removing unnecessary columns, eliminating duplicates, converting data types, and processing date-time columns to ensure clean and consistent data for further analysis.
 
-### Supplier Data Transformation
+#### Supplier Data Transformation
 
 1. **Remove Unnecessary Columns:**
    - Removed the column `Unnamed: 0`.
@@ -128,7 +128,7 @@ A detailed description of the data transformation steps performed on various dat
 2. **Remove Duplicates:**
    - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
 
-### Product Data Transformation
+#### Product Data Transformation
 
 1. **Remove Unnecessary Columns:**
    - Removed the column `Unnamed: 0`.
@@ -136,7 +136,7 @@ A detailed description of the data transformation steps performed on various dat
 2. **Remove Duplicates:**
    - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
 
-### Product Category Data Transformation
+#### Product Category Data Transformation
 
 1. **Remove Unnecessary Columns:**
    - Removed the column `Unnamed: 0`.
@@ -144,7 +144,7 @@ A detailed description of the data transformation steps performed on various dat
 2. **Remove Duplicates:**
    - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
 
-### Order Data Transformation
+#### Order Data Transformation
 
 1. **Convert Data Types:**
    - Converted the `customer_id` column to float.
@@ -156,7 +156,7 @@ A detailed description of the data transformation steps performed on various dat
 3. **Date-Time Column Processing:**
    - Split the `created_at` column into `created_at` and `period_time` using a space delimiter. If splitting fails, default the `period_time` column to `00:00:00`.
 
-### Login Attempts Data Transformation
+#### Login Attempts Data Transformation
 
 1. **Convert Data Types:**
    - Converted the `customer_id` column to float.
@@ -168,7 +168,7 @@ A detailed description of the data transformation steps performed on various dat
 3. **Date-Time Column Processing:**
    - Split the `attempted_at` column into `attempted_at` and `period` using a space delimiter.
 
-### Customer Data Transformation
+#### Customer Data Transformation
 
 1. **Convert Data Types:**
    - Converted the `zip_code` column to a string.
@@ -176,31 +176,42 @@ A detailed description of the data transformation steps performed on various dat
 2. **Create New Columns:**
    - Created a new `full_name` column by concatenating the `first_name` and `last_name` columns.
 
-### Coupon Data Transformation
+#### Coupon Data Transformation
 
 1. **Discount Column Processing:**
    - If the `discount_percent` column exists, converted its values to strings and removed the percent sign (%).
    - Added a new `numeric_value` column containing the numeric value of the converted discount percentages.
 
-### Order Item Data Transformation
+#### Order Item Data Transformation
 
 1. **Remove Duplicates:**
    - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
 
-### _Additional Notes_
+##### _Additional Notes_
 
 - Each transformation function uses `XCom` to fetch data from the database.
 - Each fetched and transformed dataset is loaded into new tables in PostgreSQL using the `to_sql` function from Pandas.
 
 ---
 
-## Data Marts
-* Customer Lifetime Value (CLV), Identify high-value customers and understand spending patterns. This helps in tailoring marketing strategies and improving customer retention.
-* Product Performance Analysis, Highlight top-performing products and categories. Use this data to manage inventory effectively and plan product development strategies.
-* Burning Rate, It measures the rate at which a company is spending its capital.
+## Data Marts Overview
+
+1. Customer Lifetime Value (CLV): Identify high-value customers and understand their spending patterns. This helps in tailoring marketing strategies and improving customer retention. The `marts_cust_highest_clv` table aggregates customer order data to calculate the lifetime value of each customer. It includes metrics such as total orders, total spending, average order value, and the computed customer lifetime value (CLV). The table highlights the top 7 customers by CLV.
+
+2. Burn Rate: Track the amount of discount given over time to manage promotional costs. The `marts_burn_rate` table records the total discount given each day. This is calculated based on order details, product prices, and applicable coupon values.
+
+3. CLV Quartiles: Segment customers into different CLV groups to identify patterns and target marketing efforts more effectively. The `marts_quartiles_clv` table segments customers into 'Low CLV', 'Medium CLV', and 'High CLV' based on their total spending. It provides the count and percentage of customers in each segment, helping to understand the distribution of customer value.
+
+4. Sales Performance: Monitor daily sales performance to make informed decisions about sales strategies and operations. The `marts_sales_performance` table captures daily sales data, including total orders, total sales, total units sold, and the average price per unit. This helps in tracking sales trends and performance over time.
+
+5. Top Products Sales: Highlight top-performing products to manage inventory effectively and plan product development strategies. The `marts_top_products_sales` table lists the top 5 products by total sales amount. It aggregates sales data by product and ranks them to identify the best sellers.
+
+6. Category Sales Customers: Analyze sales performance across different product categories to optimize product offerings and marketing strategies. The `marts_category_sales_customers` table aggregates sales data by product category, including the total number of customers and total sales for each category. This helps in understanding the popularity and performance of different categories.
+
+---
 
 ## Dashboard with Tableau
 [![Clean-Shot-2023-12-06-at-14-13-54.png](https://i.postimg.cc/dVmMTpdC/Clean-Shot-2023-12-06-at-14-13-54.png)](https://postimg.cc/4Yd2D8W4)
 
----
+
 
