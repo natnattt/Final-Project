@@ -211,7 +211,8 @@ A detailed description of the data transformation steps performed on various dat
 ---
 
 ## Dashboard with Tableau
-[![Clean-Shot-2023-12-06-at-14-13-54.png](https://i.postimg.cc/dVmMTpdC/Clean-Shot-2023-12-06-at-14-13-54.png)](https://postimg.cc/4Yd2D8W4)
+![Screenshot 2024-06-23 135926](https://github.com/natnattt/Final-Project/assets/164592034/1de960c0-4d55-41c1-8726-398527f79107)
+
 
 
 
