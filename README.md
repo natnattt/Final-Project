@@ -109,13 +109,13 @@ This folder contains script needed in order to automate an initializations proce
 
 ---
 
-### Data Lineage
+### Dimensional Modelling
 [![dbt-dag.png](https://i.postimg.cc/Ss1zrZ0Q/dbt-dag.png)](https://postimg.cc/DJsZfPyR)
 
 ---
 
 ## Additional Transforming
-
+* 
 ---
 
 ## Dashboard with Tableau
