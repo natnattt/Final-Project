@@ -52,4 +52,5 @@ if curl -s http://$1/api/session/properties | jq -r '."setup-token"' | grep -ioE
         -H "X-Metabase-Session: ${sessionToken}" \
     http://$1/api/database | jq -r '.data[].name') && \
     sh /tmp/metabase_create_conn.sh "$1" "${dbList}" "${sessionToken}" && \
+    
 echo ' < Admin session token, exiting';fi
