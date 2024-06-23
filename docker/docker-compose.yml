@@ -35,6 +35,7 @@ services:
       - MB_USER_EMAIL=${METABASE_USER_EMAIL}
       - MB_USER_PASSWORD=${METABASE_USER_PASSWORD}
       - MB_USER_FIRST_NAME=${METABASE_USER_FIRST_NAME}
+      
       - MB_USER_LAST_NAME=${METABASE_USER_LAST_NAME}
     command: sh /tmp/metabase_entrypoint.sh ${METABASE_CONTAINER_NAME}:3000
 networks:
