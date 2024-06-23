@@ -113,7 +113,7 @@ This folder contains script needed in order to automate an initializations proce
 ---
 
 ### Dimensional Modelling
-[![dbt-dag.png](https://i.postimg.cc/Ss1zrZ0Q/dbt-dag.png)](https://postimg.cc/DJsZfPyR)
+![Data Modeling](https://github.com/natnattt/Final-Project/assets/164592034/936641af-870b-4c58-a596-3b8fc264444f)
 
 ---
 
