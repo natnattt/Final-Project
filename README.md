@@ -1,4 +1,4 @@
-![image](https://github.com/natnattt/Final-Project/assets/164592034/d0409a62-29da-4003-bbd9-68dfb3ac4827)# Final Project Data Warehouse - Dibimbing - Kelompok 2
+# Final Project Data Warehouse - Dibimbing - Kelompok 2
 
 ## Objectives
 The challenge for you is to build a data infrastructure using synthetic data. You will be provided with a project template to assist you in your role as a Data Engineer. Here are the tasks:
