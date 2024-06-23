@@ -1,4 +1,4 @@
-# Final Project Data Warehouse - Dibimbing - Kelompok 2
+![image](https://github.com/natnattt/Final-Project/assets/164592034/d0409a62-29da-4003-bbd9-68dfb3ac4827)# Final Project Data Warehouse - Dibimbing - Kelompok 2
 
 ## Objectives
 The challenge for you is to build a data infrastructure using synthetic data. You will be provided with a project template to assist you in your role as a Data Engineer. Here are the tasks:
@@ -84,20 +84,20 @@ There is also `requirements.txt`, so if you want to add a library to the Airflow
 
 This is were you put your `dag` files. This folder is already mounted on the container, hence any updates here will automatically take effect on the container side.
 
-**data**
-
-This flder contains the data needed for your project. If you want to generate or add additional data, you can place them here.
-
 <details>
     
 ### Ingest Data DAG
-[![Screen-Shot-2023-12-06-at-16-32-21.png](https://i.postimg.cc/RhnxY0Y6/Screen-Shot-2023-12-06-at-16-32-21.png)](https://postimg.cc/SYqP2mkk)
-### Data Transformation with DBT - Bash
-[![Screen-Shot-2023-12-06-at-16-36-06.png](https://i.postimg.cc/MHbJwLWq/Screen-Shot-2023-12-06-at-16-36-06.png)](https://postimg.cc/FkRBgDdB)
-### Data Transformation with DBT - Cosmos by Astronomer
-[![Screen-Shot-2023-12-06-at-16-37-23.png](https://i.postimg.cc/vTX23wYg/Screen-Shot-2023-12-06-at-16-37-23.png)](https://postimg.cc/LgYV87Z2)
+![image](https://github.com/natnattt/Final-Project/assets/164592034/60212f39-1101-4ba1-bc96-c03a511b82c7)
+### Data Transformation 
+![image](https://github.com/natnattt/Final-Project/assets/164592034/d1ca9796-c2ea-42dc-8d7e-5872a622f553)
+### Data Marts
+![image](https://github.com/natnattt/Final-Project/assets/164592034/f3b8d166-8364-4d1d-975d-ec3dabcdd59c)
 
 </details>
+
+**data**
+
+This flder contains the data needed for your project. If you want to generate or add additional data, you can place them here.
 
 **docker**
 
