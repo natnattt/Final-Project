@@ -17,7 +17,8 @@ _Note: All data used is synthetic, reflecting real-world data from an online ret
 
 ## Overview
 ### Full Pipeline
-![Uploading Data Pipeline.drawio.png…]()
+![image](https://github.com/natnattt/Final-Project/assets/164592034/de4bd2b9-745a-4557-81d8-2ea5cda23d8d)
+
 
 
 ## Setup
