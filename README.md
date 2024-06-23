@@ -117,15 +117,89 @@ This folder contains script needed in order to automate an initializations proce
 
 ---
 
-## Additional Transforming
-* 
+## Data Transformation Project
+A detailed description of the data transformation steps performed on various datasets. The transformations include removing unnecessary columns, eliminating duplicates, converting data types, and processing date-time columns to ensure clean and consistent data for further analysis.
+
+### Supplier Data Transformation
+
+1. **Remove Unnecessary Columns:**
+   - Removed the column `Unnamed: 0`.
+   
+2. **Remove Duplicates:**
+   - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
+
+### Product Data Transformation
+
+1. **Remove Unnecessary Columns:**
+   - Removed the column `Unnamed: 0`.
+   
+2. **Remove Duplicates:**
+   - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
+
+### Product Category Data Transformation
+
+1. **Remove Unnecessary Columns:**
+   - Removed the column `Unnamed: 0`.
+   
+2. **Remove Duplicates:**
+   - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
+
+### Order Data Transformation
+
+1. **Convert Data Types:**
+   - Converted the `customer_id` column to float.
+   - Ensured the `created_at` column is treated as a string.
+   
+2. **Remove Duplicates:**
+   - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
+
+3. **Date-Time Column Processing:**
+   - Split the `created_at` column into `created_at` and `period_time` using a space delimiter. If splitting fails, default the `period_time` column to `00:00:00`.
+
+### Login Attempts Data Transformation
+
+1. **Convert Data Types:**
+   - Converted the `customer_id` column to float.
+   - Ensured the `attempted_at` column is treated as a string.
+   
+2. **Remove Duplicates:**
+   - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
+
+3. **Date-Time Column Processing:**
+   - Split the `attempted_at` column into `attempted_at` and `period` using a space delimiter.
+
+### Customer Data Transformation
+
+1. **Convert Data Types:**
+   - Converted the `zip_code` column to a string.
+   
+2. **Create New Columns:**
+   - Created a new `full_name` column by concatenating the `first_name` and `last_name` columns.
+
+### Coupon Data Transformation
+
+1. **Discount Column Processing:**
+   - If the `discount_percent` column exists, converted its values to strings and removed the percent sign (%).
+   - Added a new `numeric_value` column containing the numeric value of the converted discount percentages.
+
+### Order Item Data Transformation
+
+1. **Remove Duplicates:**
+   - Removed duplicates based on the `id` column, keeping only the most recent duplicate (`keep='last'`).
+
+### _Additional Notes_
+
+- Each transformation function uses `XCom` to fetch data from the database.
+- Each fetched and transformed dataset is loaded into new tables in PostgreSQL using the `to_sql` function from Pandas.
+
 ---
 
-## Dashboard with Tableau
+## Data Marts
 * Customer Lifetime Value (CLV), Identify high-value customers and understand spending patterns. This helps in tailoring marketing strategies and improving customer retention.
 * Product Performance Analysis, Highlight top-performing products and categories. Use this data to manage inventory effectively and plan product development strategies.
 * Burning Rate, It measures the rate at which a company is spending its capital.
 
+## Dashboard with Tableau
 [![Clean-Shot-2023-12-06-at-14-13-54.png](https://i.postimg.cc/dVmMTpdC/Clean-Shot-2023-12-06-at-14-13-54.png)](https://postimg.cc/4Yd2D8W4)
 
 ---
